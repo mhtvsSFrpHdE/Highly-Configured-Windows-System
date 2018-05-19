@@ -9,42 +9,61 @@
             <h3>
                 Configure Windows Search
             </h3>
-            You can skip this part if you're rely on this feature.
-            <br>
-            Yes, Windows Search is awesome on some pro's hand, lots of features...
-            <br>
-            but the more only use it on startup menu to find specify program's shortcuts.
-            <br>
-            By default, Windows Search is heavy, a bit slow and do use less realtime internet search at the same time.
-            <br>
-            The people doesn't rely on this feature will feel bad when they just want to open Photoshop,
-            <br>
-            but Windows use five seconds to search a simple lnk(Windows shortcuts file extension name).
-            <br>
-            And cortana display a Bing search result about Photoshop.
-            <br>
-            Lots of system resource holds in this workflow, but most import thing is,
-            <br>
-            it's not fast enough.
-            <br><br>
-            To make Windows Search(Startup menu search) become a program launcher you meet in Phone,
-            <br>
-            <a href=/Pages/HowTo/OpenControlPanelWindows10.html>Open Control Panel</a>
-            , find "Indexing Options", click on it.
+            You can skip this part if you're relying on this feature.
+            <br>Yes, Windows Search is awesome on some pro's hand, those secret features...
+            <br>but the more only use it on startup menu to find specify program's shortcuts.
+            <br>By default, Windows Search is heavy, a bit slow and do use less real-time internet search at the same time(Version 1803).
+            <br>The people don't rely on this feature will feel bad when they just want to open Photoshop,
+            <br>but Windows takes five seconds to search a simple "lnk"(Windows shortcuts file extension name).
+            <br>And Cortana displays a Bing search result about Photoshop.
+            <br>Lots of system resource holds in this workflow, but most import thing is,
+            <br>it's not fast enough.
             <h3>
                 Indexing Options
             </h3>
-            Click on the Modify button on Indexing Options dialog,
+            To make Windows Search(Startup menu search) become a program launcher you ever meet in Phone,
+            <br>execute the following steps.
+            <ol>
+                <li><a href=/Pages/HowTo/OpenControlPanelWindows10.html>Open Control Panel</a></li>
+                <li>Open Indexing Options</li>
+                <li>Modify</li>
+                <li>remove all checkbox item and left only "Start Menu"</li>
+                <li>Click on OK button to save changes, suddenly Windows begins to remove entries other than Start menu</li>
+            </ol>
+            Close Indexing Options, soon Windows Search will have faster response.
+            <br>This setting makes Windows Search feature only cache search Start Menu shortcuts now.
+            <br>My suggestion "Remove other location" may not cover your working files, so, apply this setting or not by your choice.
+            <h3>
+                Turn off Web results(Search suggestions)
+            </h3>
+            After 1803 update, group policy doesn't work to block web search.(Pro Version)
+            <br>I don't care about all the tech details but I don't glad to see web result.
+            <br>Luckily people on the internet found the solution that can prevent web results.
+            <br>There is a discussion on Reddit: <a href=https://www.reddit.com/r/Windows10/comments/8adtho/scu1803_no_longer_possible_to_disable_web_search/>[SCU/1803] No longer possible to disable web search and search suggestions in Search</a>
+            <br>In the reply of user jakegh, he provides a method to use Windows Firewall to avoid this.
             <br>
-            remove all check box item and left only "Start Menu".
-            <br>
-            Click on OK button to save changes, suddenly Windows begins to remove entries other than Start menu.
-            <br>
-            Close Indexing Options, soon Windows Search will have fast response.
-            <br>
-            This settings removed Windows Search features and it can only search Start Menu shortcuts now.
-            <br>
-            Apply this settings or not, by your choice.
-        </p>
+            <q>
+                <p>
+                    jakegh 17 points 1 month ago
+                    <br>Frustrating and infuriating behavior from MS. If I didn't play games I would have switched to mac years ago.
+                    <br>Anyway, I block outgoing connections from searchui.exe in my firewall, hopefully that will stop it.
+                    <br>The guys at Shutup10 and/or Winaero will probably figure out how to stop it too.
+                </p>
+            </q>
+            <br>If you still need Cortana online features,
+            <br>unfortunately, there isn't a method to prevent Web result but keeps Cortana online. (Version 1803) 
+            <br>HowTo:
+            <ol>
+                <li><a href=/Pages/HowTo/OpenControlPanelWindows10.html>Open Control Panel</a></li>
+                <li>Open Windows Defender Firewall</li>
+                <li>Advanced settings</li>
+                <li>Outbound Rules</li>
+            </ol>
+            And the following image shows configure details.
+            <br><img src="/Resources/WindowsSearch/IndexOptions/1.png" width="714" height="581">
+            <br><img src="/Resources/WindowsSearch/IndexOptions/2.png" width="714" height="581">
+            <br><img src="/Resources/WindowsSearch/IndexOptions/3.png" width="714" height="581">
+            <br><img src="/Resources/WindowsSearch/IndexOptions/4.png" width="714" height="581">
+            <br><img src="/Resources/WindowsSearch/IndexOptions/5.png" width="714" height="581">
     </body>
 </html>
