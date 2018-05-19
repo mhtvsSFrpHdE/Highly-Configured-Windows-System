@@ -9,114 +9,64 @@
             <h3>
                     Configure Windows Update
             </h3>
-            <a href=/Pages/HowTo/OpenSettingsWindows10.html>Open settings app</a>
-            , Select "Update &amp; security" -> "Windows Update".
-            <br>
-            In this interface, there're some important button under Update status section.
-            <br><br>
-            They're:
-            <ul>
-                <li>Change active hours</li>
-                <li>Restart options</li>
-                <li>Advanced options</li>
-            </ul>
+            I don't remember the details in the past years.
+            <br>Windows Update often broke important progress unexpected.
+            <br>In the early version, if Windows Update detect people trying to disable Update by REGEDIT, group policy, or service,
+            <br>Windows will even auto download a tool called "Windows 10 Update Assitant".
+            <br>This is a terrible software because it downloads the new version of Windows 10 in the background,
+            <br>Once download completed, it popped up a dialog that requests a reboot,
+            <br>the user can choose reboot now or delay.
+            <br
+            <br>Sounds not that bad huh, the thing is, this dialog has a 10-minute timer,
+            <br>if you can't respond in 10 minutes, a reboot is automatically.
+            <br>The dialog may not able to get a response from the user for several reasons,
+            <br>aborted from keyboard, buy foods, constipation, full-screen gaming, etc.
+            <br>You may have important program have to always online.
+            <br>For example, Minecraft server, remote desktop solution, etc.
+            <br>A reboot will not automatically reboot those service for you so they will offline for a long time until you get back to the computer.
+            <br>We have seen a lot youtube lost their game and get a reboot because of Windows Update.
+            <br>The same situation happened to me. I have all known safety measures to block Windows Update,
+            <br>but I still get a reboot while I'm going outdoors. I trust this is caused by Windows 10 Update Assitant. (Early 1703 Version)
+            <br>On the recent 1709 and 1803, I trust Windows 10 will not reboot without user permitive. "Thank you", Microsoft.
+            
             <h3>
-                Restart options
-            </h3>
-            <h4>
-                Turn on "Show more notifications".
-            </h4>
-            Once you've done it, click the "&larr;" button on title bar to back to privous interface.
-            <br>
-            This will give you a chance to decline computer restart while Windows Update if you have some documents or programs haven't save.
-            <br>
-            Of course, this will only work when you're not using full screen applications,
-            <br>
-            otherwise, you still not able to be notified and may timeout to response and get a restart without saving your contents.
-            <br>
-            You can search "Windows full screen exclusive mode" to get more information.
-            <h3>
-                Advanced options
-            </h3>
-            <h4>
-                Choose how updates are installed
-            </h4>
-            Select the checkbox of
-            <br>
-            "Give me updates for other Microsoft products when I update Windows".
-            <br>
-            This will allow Windows Update to install many other Microsoft products updates like it says,
-            <br>
-            The reason you should enable it is security.
-            <br>
-            Latest security of Microsoft products will delever to you soon once they're available and you don't need to worry about them.
-            <h4>
-                Choose when updates are installed
-            </h4>
-            I would not recommended the "Current Branch" for anyone,
-            <br>
-            this can bring you more restart request from Windows Update.
-            <br>
-            But if you get interested in latest Windows feature just like me, during the redstone update,
-            <br>
-            turn it to "Current Branch" and be excited.
-            <br>
-            Otherwize, use "Current Branch for Business".
-            <br>
-            You'll still get security updates, but feature updates will come more lately until they're stable enough.
-            <h4>
                 Pause Updates
-            </h4>
+            </h3>
             I understand many people hate Windows Update
+            <br>and hope their fantastic, perfect Windows XP can up and running forever, without updates.
+            <br>As a programmer(Self-proclaimed), I would say, hey, you know nothing about power.
+            <br>Lack latest feature update won't hurt you,
+            <br>but when lacking security updates, the hackers can steal anything from you
+            <br>even if you simply connect your device to the internet and do nothing else.
+            <br>Serval known Windows security breach proves this.
+            <br>Don't turn this off, use it only if you're facing a pain can't reboot for hours.
+            <br>You can turn it off while gaming or broadcast but turn it back on once you're done. 
             <br>
-            and hope their fantastic Windows XP can up and running forever, without updates.
-            <br>
-            As a programmer, I would say, hey, you know nothing about power.
-            <br>
-            Lack latest feature update won't hurt you,
-            <br>
-            but when lacking security updates, the hackers can steal anything from you
-            <br>
-            even if you're simply connect your device to internet and do nothing else.
-            <br>
-            Don't turn this off, use it only if you're facing a pain can't reboot for hours.
-            <br>
-            You can turn it off while gaming or broadcast, but turn it back on once you're done.
-            <br><br>
-            EDIT: After this suggest wrote, I received some report shows Microsoft force a Windows 10 upgrade even if this option turned off.
-            <br>
-            This is a lie. It says it will pause for 30 days but it still did a dangerous upgrade and may damage running service or our data.
-            <br>
-            To fight back, here is two script for alternative. And these are faster than settings app click-click-click.
+            <br>EDIT: Since version 1803, the auto reboot isn't a problem anymore.
+            <br>But if you hope your gaming performance doesn't affect by Windows Update,
+            <br>Here is two script for the alternative. And these are faster than settings app click-click-click.
+            <br>Even I did a stop Windows Update service request in the script,
+            <br>a system reboot may still be required to work properly.
+            <br>Right click the script and choose "Run as Administrator".
             <ul>
                 <li>
-                    <a href=/Resources/WindowsUpdateDisable.cmd>WindowsUpdateDisable.cmd</a>
+                    <a href=/Resources/WindowsUpdate/WindowsUpdateDisable1703.cmd>WindowsUpdateDisable.cmd</a>
                 </li>
                 <li>
-                    <a href=/Resources/WindowsUpdateEnable.cmd>WindowsUpdateEnable.cmd</a>
+                    <a href=/Resources/WindowsUpdate/WindowsUpdateEnable1703.cmd>WindowsUpdateEnable.cmd</a>
                 </li>
             </ul>
-            Right click the script and choose "Run as Administrator".
-            <br>
-            Even I did a stop Windows Update service request, a system reboot may still required to work properly.
-            <h4>
+            <h3>
                 Choose how updates are delivered
-            </h4>
+            </h3>
             I left this options to off.
-            <br>
-            This options can speed up your Updates download speed,
-            <br>
-            but as the price that Microsoft not telling you explicit,
-            <br>
-            Windows will keep a cache on your system drive in order to share them to others,
-            <br>
-            and downcrase your hard drive performance while others need updates from you.
-            <br>
-            On another hand, keep extra cache files on SSD drives may reduce SSD life cycle.
-            <br>
-            I don't know, up to your manufacturers.
-            <br>
-            Make a decision according to your faith.
+            <br>This options can speed up your Updates download speed,
+            <br>but as the price that Microsoft not telling you explicit,
+            <br>Windows will keep a cache on your system drive in order to share them to others,
+            <br>and downgrade your hard drive performance while others need updates from you.
+            <br>On another hand, keep extra cache files on SSD drives may reduce SSD life cycle.
+            <br>I don't know, up to your manufacturers.
+            <br>Make a decision according to your faith.
         </p>
     </body>
 </html>
