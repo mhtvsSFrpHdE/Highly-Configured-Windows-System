@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <a href=/Index.html>Back to Index</a>
+
+        <p>
+            <h3>
+                Information about high dpi
+            </h3>
+            Since Windows 10, dpi not a annoying problem often.
+            <br>So all about high dpi in here is for more luxury experience.
+
+            <h3>
+                Integer ratio scaling
+            </h3>
+            There is a <a href=https://forums.geforce.com/default/topic/844905/geforce-drivers/-feature-request-nonblurry-upscaling-at-integer-ratios/>discuss</a> on nvidia forum,
+            <br>unfortunately years later we still don't have valid method to do it.
+            <br>A cheap low-end graphic card can't affort 4K resolution modern 3D game.
+            <br>When using a 4K monitor, 1080p gaming still an option for 60 FPS.
+            <br>
+            <br>In Windows 10, right click on a exe file, select Properties -&gt; Compatibility -&gt; Change high DPI settings(Version 1803),
+            <br>check the "High DPI scaling override" option and select "System" in the drop down menu will able to force scale a program.
+            <br>Both "System" and "System (Enhanced)" support integer scale if system general dpi is a multiple of 100%.
+            <br>But many program can't reconize "System (Enhanced)" correctly.
+            <br>You can notice that only 1/4 displayed on monitor  left top corner, so use "System" instead.
+            <br>Final Fantasy XIV have this problem with "System (Enhanced)" and work with "System".
+
+            <h3>
+                Borderless windowed fullscreen
+            </h3>
+            For the fullscreen programs, a 3rd party software able to turn them into borderless windowed mode,
+            <br>with a proper resolution settings they can scaled by Windows from 1080p to 4K.
+            <br>Here is their project link, you can also buy from Steam.
+            <br>To work with Windows scale, both Borderless's exe and target program exe file should also set override to "System"
+            <br><a href=https://github.com/Codeusa/Borderless-Gaming>Borderless-Gaming</a>
+            <br><a href=https://store.steampowered.com/app/388080/Borderless_Gaming/>Steam page</a>
+
+            <h3>
+                Disable fullscreen optimizations
+            </h3>
+            I actually don't care the enhance, but when using Borderless windowed fullscreen mode,
+            <br>with fullscreen optimizations on, once switched into program window,
+            <br>the program being blurred even if general dpi is a mutiple of 100%.
+            <br>If switch to other window, the blurred disappear.
+            <br>Turn off this feature can solve this problem.
+            <br>Right click on a exe file, select Properties -&gt; Compatibility, uncheck "Disable fullscreen optimizations".
+            <br>
+            <br>But I trust this is a incomplete programming result, Microsoft should take care in future.
+            <br>I'll try to contact someone later on.
+
+            <h3>
+                Performace
+            </h3>
+            Sadly Windows System scale to 4K caused many program graphics capability lower than usual.
+            <br>For Elder Scroll Skyrim Special Edition, may lose 15 more FPS in some cases.
+            <br>Hopefully Microsoft can solve this issue or Nvidia implement their hardware integer scale.
+        </p>
+    </body>
+</html>
